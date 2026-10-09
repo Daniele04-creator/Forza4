@@ -24,7 +24,8 @@ richiede una nuova richiesta di ingresso e la sua accettazione.
 Erano richiesti un README con le istruzioni di avvio e una documentazione
 di massimo 10 pagine sulle scelte implementative. Queste scelte sono
 spiegate nel [documento PDF di otto pagine](implementation.pdf),
-che include gli schemi dell'architettura e degli stati della partita.
+che include gli schemi dell'architettura e degli stati della partita,
+insieme a una schermata di gioco dei due client nel terminale.
 
 ## Struttura dell'applicazione
 
