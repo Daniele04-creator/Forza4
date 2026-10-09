@@ -23,9 +23,31 @@ richiede una nuova richiesta di ingresso e la sua accettazione.
 
 Erano richiesti un README con le istruzioni di avvio e una documentazione
 di massimo 10 pagine sulle scelte implementative. Queste scelte sono
-spiegate nel [documento PDF di otto pagine](implementation.pdf),
+spiegate nel [documento PDF di nove pagine](implementation.pdf),
 che include gli schemi dell'architettura e degli stati della partita,
 insieme a una schermata di gioco dei due client nel terminale.
+Le sezioni su concorrenza, protocollo e regole sono divise in sottosezioni,
+con collegamenti nell'indice e spaziatura tra i paragrafi.
+
+### Rigenerare la documentazione
+
+Il [sorgente LaTeX](documentation/implementation.tex) e la schermata di gioco
+sono conservati nella cartella `documentation`. Per rigenerare il PDF serve
+una distribuzione LaTeX con `pdflatex` e i pacchetti usati dal sorgente.
+Eseguire questi comandi da una shell compatibile con Bash, nella cartella
+del progetto:
+
+```bash
+mkdir -p build
+cd documentation
+pdflatex -interaction=nonstopmode -halt-on-error -output-directory=../build implementation.tex
+pdflatex -interaction=nonstopmode -halt-on-error -output-directory=../build implementation.tex
+pdflatex -interaction=nonstopmode -halt-on-error -output-directory=../build implementation.tex
+cp ../build/implementation.pdf ../implementation.pdf
+```
+
+Le compilazioni ripetute aggiornano indice e collegamenti. Il PDF deve
+restare entro 10 pagine complessive, comprese copertina e indice.
 
 ## Struttura dell'applicazione
 
