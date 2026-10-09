@@ -40,8 +40,5 @@ desktop.ini
 *.out
 *.synctex.gz
 
-# Keep only the final documentation PDF in output
-/output/*
-!/output/pdf/
-/output/pdf/*
-!/output/pdf/implementation.pdf
+# Generated output
+/output/
