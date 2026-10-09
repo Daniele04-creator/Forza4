@@ -1,0 +1,18 @@
+services:
+  server:
+    build:
+      context: ./server
+    container_name: forza4_server
+    ports:
+      - "5555:5555"
+
+  client:
+    build:
+      context: ./client
+    stdin_open: true
+    tty: true
+    depends_on:
+      - server
+    environment:
+      - SERVER_HOST=server
+      - SERVER_PORT=5555

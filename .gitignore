@@ -1,0 +1,47 @@
+# Python environments and caches
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+
+# C binaries and compilation output
+/server/connect_four_server
+/tests/game_test
+/tests/net_test
+*.o
+*.a
+*.so
+*.dll
+*.exe
+/build/
+/dist/
+
+# Local settings, credentials and temporary files
+.env
+.env.*
+!.env.example
+.idea/
+.vscode/
+/tmp/
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# LaTeX compilation output
+*.aux
+*.toc
+*.out
+*.synctex.gz
+
+# Keep only the final documentation PDF in output
+/output/*
+!/output/pdf/
+/output/pdf/*
+!/output/pdf/implementation.pdf
